@@ -1,0 +1,58 @@
+<h3> View EmployeeDetails</h3>
+<div>
+  <div>
+    <label><b>EmployeeID</b></label>{{employee.emp_ID}}
+  </div>
+  <div>
+    <label><b>FirstName</b></label>{{employee.first_Name}}
+  </div>
+  <div>
+    <label><b>LastName</b></label>{{employee.last_Name}}
+  </div>
+  <div>
+    <label><b>Gender</b></label>{{employee.gender}}
+  </div>
+  <div>
+    <label><b>Date ofBirth</b></label>{{employee.dob}}
+  </div>
+
+  <div>
+    <label><b>Department</b></label>{{employee.department}}
+  </div>
+
+
+  <div>
+    <label><b>Contact NO</b></label>{{employee.phone}}
+  </div>
+
+<div>
+  <label>
+
+  </label>
+</div>
+
+
+    <div >
+        <table>
+          <thead>
+            <th>EmpdataId</th>
+            <th>City</th>
+            <th>District</th>
+            <th>AddressID</th>
+          </thead>
+
+           <tr *ngFor="let List ofemployee">
+
+          <td>  {{List.empdataId}}
+            {{List.emplist.empaddressId}}
+            {{List.emplist.district}}</td>
+           </tr>
+
+
+        </table>
+    </div>
+
+
+
+
+</div>

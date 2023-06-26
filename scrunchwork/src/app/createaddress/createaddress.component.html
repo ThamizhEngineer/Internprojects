@@ -1,0 +1,25 @@
+
+<form (ngSubmit)="OnSubmit()">
+  <h3>Create Employee Data</h3>
+  <div class="form-Group">
+    <label for="empdataId">EmpDataId</label>
+    <input type="empdataId" id="empdataId" [(ngModel)]="employeedata.empdataId" name="empdataId" class="form-control" />
+  </div>
+  <div class="form-Group">
+    <label for="city">City</label>
+    <input type="city" id="city" [(ngModel)]="employeedata.city" name="city" class="form-control" />
+  </div>
+  <div class="form-Group">
+    <label for="district">District</label>
+    <input type="district" id="district" [(ngModel)]="employeedata.district" name="district" class="form-control" />
+  </div>
+  <div class="form-Group">
+    <label for="empaddressId">AddressId</label>
+    <input type="empaddressId" id="empaddressId" [(ngModel)]="employeedata.empaddressId" name="empaddressId" class="form-control" />
+  </div>
+
+  <div class="form-Group">
+    <button class="btn btn-success" type="submit" click="gotoemplist()">Add Empaddress</button>
+  </div>
+
+</form>

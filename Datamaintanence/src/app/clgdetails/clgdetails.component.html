@@ -1,0 +1,28 @@
+<html>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-stripped">
+          <thead>
+            <th>clgid</th>
+            <th>clgname</th>
+            <th>place</th>
+            <th>cid</th>
+            <th>fees</th>
+            <th>annualfees</th>
+          </thead>
+          <tbody>
+            <tr *ngFor= "let College ofColleges">
+              <td>{{College.clgid}}</td>
+              <td>{{College.clgname}}</td>
+              <td>{{College.place}}</td>
+              <td>{{College.cid}}</td>
+              <td>{{College.fees}}</td>
+              <td>{{College.annualfees}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</html>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Categories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <ion-spinner name="Crescent" *ngIf="isLoadingResults"></ion-spinner>
+  </div>
+  <ion-item class="example-card">
+    <form [formGroup]="productForm" (ngSubmit)="onFormSubmit()">
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Productid" formControlName="productid"  [errorStateMatcher]="matcher">
+          <mat-error>
+            <span *ngIf="!productForm.get('productid').valid && productForm.get('productid').touched">Please enter ProductId</span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="ProductName" formControlName="productname" [errorStateMatcher]="matcher"> <br>
+          <mat-error>
+            <span *ngIf="!productForm.get('productname').valid && productForm.get('productname').touched">Please enter ProductName</span>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+     <div class="row">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="productprice" formControlName="productprice" [errorStateMatcher]="matcher">
+        <mat-error>
+          <span *ngIf="!productForm.get('productprice').valid && productForm.get('productprice').touched">Please enter Product Price</span>
+        </mat-error>
+      </mat-form-field>
+     </div>
+     <div class="row">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="quantity" formControlName="quantity"  [errorStateMatcher]="matcher" >
+        <mat-error>
+          <span *ngIf="!productForm.get('quantity').valid && productForm.get('quantity').touched">Please enter Quantity</span>
+        </mat-error>
+      </mat-form-field>
+     </div>
+      <div class="button-row">
+        <button type="submit" [disabled]="!productForm.valid" mat-flat-button (click)="goproducts()" color="danger"> save</button>
+      </div>
+    </form>
+  </ion-item>
+</div>
+</ion-content>
+

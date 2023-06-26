@@ -1,0 +1,11 @@
+.header {
+    border: 2px solid black;
+    /* color: aquamarine; */
+    background-color: #77ccf3;
+}
+li.nav-item {
+    list-style-type: none;
+    float: left;
+    text-decoration: none;
+    margin-left: 230px;
+}

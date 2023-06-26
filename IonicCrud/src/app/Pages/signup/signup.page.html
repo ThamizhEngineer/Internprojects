@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="mango">
+    <ion-title>Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding='true'>
+  <div class="center">
+    <img src="assets/images/register.png" class="smallLogo"/>
+    <!-- <h2>Create Account</h2> -->
+  </div>
+  <form>
+    <ion-list>
+        <!-- <ion-item>
+            <ion-label position="stacked">Name</ion-label>
+            <ion-input autocomplete="off" name="name" type="text" ></ion-input>
+          </ion-item> -->
+          <!-- [(ngModel)]="postData.name" -->
+       <ion-item>
+        <ion-label position="stacked">UserID</ion-label>
+        <ion-input autocomplete="off" name="id" type="number"  [(ngModel)]="lgdata.id"></ion-input>
+      </ion-item>
+      <!-- [(ngModel)]="postData.email" -->
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input autocomplete="off" name="username" type="text"  [(ngModel)]="lgdata.username" ></ion-input>
+      </ion-item>
+      <!-- -->
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input autocomplete="off" name="password" type="password" [(ngModel)]="lgdata.password"></ion-input>
+      </ion-item>
+      <!--  -->
+      <ion-item lines='none'>
+        Already have an account? <a routerLink='/login'>Sign in.</a>
+      </ion-item>
+    </ion-list>
+    <ion-button  share="round" (click)="register()"class="signinbtn" >Register</ion-button>
+    <!-- (click)="signupAction()" -->
+  </form>
+</ion-content>

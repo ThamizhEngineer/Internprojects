@@ -1,0 +1,7 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "IonicCrud",
+  "webDir": "www",
+  "linuxAndroidStudioPath": "/snap/android-studio/current/android-studio/bin/studio.sh",
+  "bundledWebRuntime": false
+}

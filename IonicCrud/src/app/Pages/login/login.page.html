@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="mango">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding='true'>
+    <div class="center">
+      <img src="assets/images/user2.png" class="smallLogo"/>
+
+    </div>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Username</ion-label>
+         <ion-input autocomplete="off" type="text" name="username"   [(ngModel)]="lgdata.username"></ion-input>
+       </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input autocomplete="off" type="password" name="password"   [(ngModel)]="lgdata.password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <div class="row">
+      <div class="col-right">
+        <ion-button (click)="loginAction()" >Login </ion-button>
+      </div>
+      <div class="col-left">
+        <ion-button (click)="signup()"> Signup  </ion-button>
+      </div>
+      </div>
+      <!-- <p color="blue"> Create New Account By Clicking Signup</p> -->
+  </form>
+</ion-content>

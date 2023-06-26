@@ -1,0 +1,112 @@
+<html>
+  <div classs="pane panel-primary" *ngFor="let emp of employees">
+    <div class="panel-heading">
+      <h3 class="panel-tittle">{{emp.name}}</h3>
+    </div>
+    <div class="panel-boady">
+      <div class="COL-XS-10">
+        <div class="row vertical-align">
+          <div class="col-xs-4">
+            <img class="profileimage"[src]="emp.photopath"/>
+          </div>
+          <div class="col-xs-8">
+            <div class="row">
+              <div class="col-xs-6">
+                ID
+              </div>
+              <div class="col-xs-6">
+                :{{emp.id}}
+              </div>
+            </div>
+
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                Name
+              </div>
+              <div class="col-xs-6">
+                :{{emp.name}}
+              </div>
+            </div>
+            <br>
+
+            <div class="row">
+              <div class="col-xs-6">
+                Gender
+              </div>
+              <div class="col-xs-6">
+                :{{emp.gender}}
+              </div>
+
+          </div>
+          <br>
+            <div class="row">
+              <div class="col-xs-6">
+                Email
+              </div>
+              <div class="col-xs-6">
+                :{{emp.email}}
+              </div>
+            </div>
+
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                PhoneNumber
+              </div>
+              <div class="col-xs-6">
+                :{{emp.phonenumber}}
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                ContactPreferences
+              </div>
+              <div class="col-xs-6">
+                :{{emp.contactpreferences}}
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                DateofBirth
+              </div>
+              <div class="col-xs-6">
+                :{{emp.dateofbirth | date}}
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                Department
+              </div>
+              <div class="col-xs-6">
+                :{{emp.department}}
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                IsActive
+              </div>
+              <div class="col-xs-6">
+                :{{emp.isActive}}
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                PhotoPath
+              </div>
+              <div class="col-xs-6">
+                :{{emp.photopath}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</html>

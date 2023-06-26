@@ -1,0 +1,7 @@
+{
+  "name": "IonicCrud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

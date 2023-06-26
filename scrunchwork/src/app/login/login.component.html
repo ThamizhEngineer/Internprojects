@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="row">
+    <form class="f1" #loginform="ngForm" (ngSubmit)="loginuser()">
+      <h1> LoginForm</h1>
+      <div class="form-group col-md-12">
+
+        <label for="username">Username</label>
+        <input type="text" id="username" [(ngModel)]="lg.username" name="username" class="form-control" />
+      </div>
+      <div class="form-group col-md-12">
+        <label>Password</label>
+        <input type="password" id="password" [(ngModel)]="lg.pasword" name="password" class="form-control" />
+      </div>
+      <div class="form-group col-md-3">
+        <button type="submit" class="btn btn-success">Login</button>
+      </div>
+    </form>
+
+  </div>
+</div>

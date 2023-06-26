@@ -1,0 +1,181 @@
+<div class="table1">
+
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search by Name" style="width: 300px" [(ngModel)]="SearchTerm"/><i class="fa fa-search" aria-hidden="true"></i>
+  </div>
+  <h1>EmployeeTable</h1>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <th>EmployeeID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Department</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of employees | employeeFilter:SearchTerm;let i=index">
+              <td>{{emp.emp_ID}}</td>
+              <td>{{emp.first_Name}}</td>
+              <td>{{emp.last_Name}}</td>
+              <td>{{emp.department}}</td>
+              <td>
+                <button (click)="AddRow()"><i class="fa fa-plus fa-2x">Add</i></button>
+                <button (click)="employeedetails(emp.emp_ID)">View</button>
+                <button  (click)="updateemployee(emp.emp_ID)"><i class="fa fa-trash fa-2x">Update</i></button>
+                <button  (click)="deleteemployee(emp.emp_ID)"><i class="fa fa-trash fa-2x">Delete</i></button>
+
+               </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="table2">
+  <h1>EmployeeData Table</h1>
+
+    <!-- Search: <input type="text" class="form-control" placeholder="search employee" [(ngModel)]="searchTerm" style="width: 300px;"/> -->
+  <!-- <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <th>EmpDataID</th>
+            <th>City</th>
+            <th>District</th>
+            <th>EmpAddressID</th>
+
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of employeedata;let i= index">
+              <td>{{data.empdataId}}</td>
+              <td>{{data.city}}</td>
+              <td>{{data.district}}</td>
+              <td>{{data.empaddressId}}</td>
+              <td>
+                <button (click)="AddRowadd()"><i class="fa fa-plus fa-2x">Add</i></button>
+               <button  (click)="deleteemployeeadd(data.empdataId)"><i class="fa fa-trash fa-2x">Delete</i></button>
+                <button  (click)="updateemployeeadd(data.empdataId)"><i class="fa fa-trash fa-2x">Update</i></button>
+               </td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+<!-- | employeeFilter:searchTerm; -->
+
+<html>
+  <div class=" brake pane panel-primary" *ngFor="let emp of employees">
+    <div class="panel-boady">
+      <h3 class="panel-tittle">{{emp.first_Name}}</h3>
+      <div class="COL-XS-10">
+        <div class="row vertical-align">
+          <div class="col-xs-4">
+            <!-- <img class="profileimage"[src]="emp.photopath"/> -->
+          </div>
+          <div class="col-xs-8">
+            <div class="row">
+              <div class="col-xs-6">
+                EmployeeID
+              </div>
+              <div class="col-xs-6d">
+                :{{emp.emp_ID}}
+              </div>
+            </div>
+
+            <br>
+            <div class="row">
+              <div class="col-xs-6">
+                FirstName
+              </div>
+              <div class="col-xs-6d fn">
+                :{{emp.first_Name}}
+              </div>
+            </div>
+            <br>
+
+            <div class="row">
+              <div class="col-xs-6">
+               LastName
+              </div>
+              <div class="col-xs-6d ln">
+                :{{emp.last_Name}}
+              </div>
+
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-6">
+             Dateof Birth
+            </div>
+            <div class="col-xs-6d dob">
+              :{{emp.dob}}
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-6">
+           Gender
+            </div>
+            <div class="col-xs-6d gen">
+              :{{emp.gender}}
+            </div>
+          </div>
+
+          <br>
+
+            <div class="row">
+              <div class="col-xs-6">
+                PhoneNumber
+              </div>
+              <div class="col-xs-6d  ph">
+                :{{emp.phone}}
+              </div>
+            </div>
+            <br>
+
+
+            <div class="row">
+              <div class="col-xs-6">
+                Department
+              </div>
+              <div class="col-xs-6d dpt">
+                :{{emp.department}}
+              </div>
+            </div>
+            <br>
+            <!-- <div class="row">
+              <div class="col-xs-6">
+                IsActive
+              </div>
+              <div class="col-xs-6">
+                :{{emp.isActive}}
+              </div>
+            </div>
+            <br> -->
+            <!-- <div class="row">
+              <div class="col-xs-6">
+                PhotoPath
+              </div>
+              <div class="col-xs-6">
+                :{{emp.photopath}}
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</html>
